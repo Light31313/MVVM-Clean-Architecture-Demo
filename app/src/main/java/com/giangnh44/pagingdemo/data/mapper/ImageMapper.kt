@@ -1,8 +1,7 @@
 package com.giangnh44.pagingdemo.data.mapper
 
-import android.util.Log
-import com.giangnh44.pagingdemo.domain.model.Image
 import com.giangnh44.pagingdemo.data.remote.responses.ImageResult
+import com.giangnh44.pagingdemo.domain.model.Image
 
 fun ImageResult.toImage(): Image {
     return Image(

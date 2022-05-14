@@ -1,15 +1,16 @@
 package com.giangnh44.pagingdemo.data.repository
 
 import android.util.Log
-import androidx.paging.*
+import androidx.paging.Pager
+import androidx.paging.PagingConfig
+import androidx.paging.PagingData
+import androidx.paging.map
 import com.giangnh44.pagingdemo.data.mapper.toImage
 import com.giangnh44.pagingdemo.data.paging.PixabayPagingSource
 import com.giangnh44.pagingdemo.data.remote.PixabayAPI
 import com.giangnh44.pagingdemo.domain.model.Image
 import com.giangnh44.pagingdemo.domain.repository.ImageRepository
-import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.flow.Flow
-import kotlinx.coroutines.flow.flowOn
 import kotlinx.coroutines.flow.map
 import javax.inject.Inject
 

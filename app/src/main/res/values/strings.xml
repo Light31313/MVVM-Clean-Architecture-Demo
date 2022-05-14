@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">PagingDemo</string>
+    <string name="error_message">Can not load images LOL</string>
+    <string name="search">Search</string>
+    <string name="write_something">Write Something</string>
+
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="like">Like:</string>
+    <string name="comment">Comment:</string>
+    <string name="user">User:</string>
+    <string name="tag">TAG:</string>
+    <string name="views">views</string>
+    <string name="app_title">Image Searching</string>
+</resources>

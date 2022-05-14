@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="button_corners">6dp</dimen>
+    <dimen name="btn_search_text_size">18sp</dimen>
+    <dimen name="edt_search_image_margin">12dp</dimen>
+    <dimen name="edt_search_image_background">8dp</dimen>
+    <dimen name="edt_search_dash_width">2dp</dimen>
+    <dimen name="til_search_image_corner">12dp</dimen>
+    <dimen name="btn_search_margin_vertical">12dp</dimen>
+    <dimen name="image_info_text_size">16sp</dimen>
+    <dimen name="info_marginStart">2dp</dimen>
+    <dimen name="view_marginEnd">4dp</dimen>
+</resources>

@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+    <data>
+        <variable
+            name="image"
+            type="com.giangnh44.pagingdemo.domain.model.Image" />
+    </data>
+
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.fragment.DetailImageFragment"
+    android:background="@color/background_color">
+
+    <ImageView
+        android:id="@+id/img_big"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:src="@drawable/ic_baseline_image_24"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_percent="0.7"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        imageUrl="@{image.largeImageURL}"/>
+
+    <TextView
+        android:id="@+id/txt_like"
+        style="@style/image_info_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/like"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.05"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/img_big"
+        app:layout_constraintVertical_bias="0.2" />
+
+    <TextView
+        android:id="@+id/txt_like_number"
+        style="@style/number_info_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/info_marginStart"
+        app:layout_constraintBottom_toBottomOf="@id/txt_like"
+        app:layout_constraintStart_toEndOf="@id/txt_like"
+        app:layout_constraintTop_toTopOf="@id/txt_like"
+        android:text="@{Integer.toString(image.likes)}"/>
+
+    <TextView
+        android:id="@+id/txt_comment"
+        style="@style/image_info_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/comment"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.35"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/img_big"
+        app:layout_constraintVertical_bias="0.2" />
+
+    <TextView
+        android:id="@+id/txt_comment_number"
+        style="@style/number_info_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/info_marginStart"
+        android:text="@{Integer.toString(image.comments)}"
+        app:layout_constraintBottom_toBottomOf="@id/txt_comment"
+        app:layout_constraintStart_toEndOf="@id/txt_comment"
+        app:layout_constraintTop_toTopOf="@id/txt_comment" />
+
+    <TextView
+        android:id="@+id/txt_user"
+        style="@style/image_info_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/user"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.7"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/img_big"
+        app:layout_constraintVertical_bias="0.2" />
+
+    <TextView
+        android:id="@+id/txt_user_name"
+        style="@style/number_info_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/info_marginStart"
+        app:layout_constraintBottom_toBottomOf="@id/txt_user"
+        app:layout_constraintStart_toEndOf="@id/txt_user"
+        app:layout_constraintTop_toTopOf="@id/txt_user"
+        android:text="@{image.user}"/>
+
+    <TextView
+        android:id="@+id/txt_tag"
+        style="@style/image_info_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/tag"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@id/txt_like"
+        app:layout_constraintHorizontal_bias="0.7"
+        app:layout_constraintStart_toStartOf="@id/txt_like"
+        app:layout_constraintTop_toBottomOf="@id/txt_like"
+        app:layout_constraintVertical_bias="0.2" />
+
+    <TextView
+        android:id="@+id/txt_tag_name"
+        style="@style/number_info_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/info_marginStart"
+        android:textColor="@color/black"
+        android:textSize="@dimen/image_info_text_size"
+        app:layout_constraintBottom_toBottomOf="@id/txt_tag"
+        app:layout_constraintStart_toEndOf="@id/txt_tag"
+        app:layout_constraintTop_toTopOf="@id/txt_tag"
+        android:text="@{image.tags}"/>
+
+    <TextView
+        android:id="@+id/txt_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/view_marginEnd"
+        android:text="@string/views"
+        android:textStyle="italic"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/img_big" />
+
+    <TextView
+        android:id="@+id/txt_view_number"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/view_marginEnd"
+        android:textStyle="italic"
+        app:layout_constraintBottom_toBottomOf="@id/txt_view"
+        app:layout_constraintEnd_toStartOf="@id/txt_view"
+        app:layout_constraintTop_toBottomOf="@id/img_big"
+        app:layout_constraintTop_toTopOf="@id/txt_view"
+        android:text="@{Integer.toString(image.views)}"/>
+</androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

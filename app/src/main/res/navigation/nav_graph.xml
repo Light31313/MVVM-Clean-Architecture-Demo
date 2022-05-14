@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/imageFragment">
+
+    <fragment
+        android:id="@+id/imageFragment"
+        android:name="com.giangnh44.pagingdemo.ui.fragment.ImageFragment"
+        android:label="Hello There"
+        tools:layout="@layout/fragment_image">
+        <action
+            android:id="@+id/action_imageFragment_to_detailImageFragment"
+            app:destination="@id/detailImageFragment"
+            app:enterAnim="@anim/anim_transition_in"
+            app:exitAnim="@anim/anim_transition_out"
+            app:popEnterAnim="@anim/anim_transition_in"
+            app:popExitAnim="@anim/anim_transition_out"/>
+    </fragment>
+    <fragment
+        android:id="@+id/detailImageFragment"
+        android:name="com.giangnh44.pagingdemo.ui.fragment.DetailImageFragment"
+        android:label="This is a Picture"
+        tools:layout="@layout/fragment_detail_image">
+        <argument
+            android:name="image"
+            app:argType="com.giangnh44.pagingdemo.domain.model.Image" />
+    </fragment>
+</navigation>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="image_info_text">
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/green</item>
+        <item name="android:textSize">@dimen/image_info_text_size</item>
+    </style>
+
+    <style name="number_info_text">
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">@dimen/image_info_text_size</item>
+    </style>
+</resources>
